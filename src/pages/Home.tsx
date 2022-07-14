@@ -1,7 +1,8 @@
 import * as SC from '../styles/StylesComponentes';
 import logo from '../CatwikiLogo.svg'
-import SideBar from '../components/Sidebar';
+import SideBar from '../components/SideBar'
 import ShouldHaveCats from '../components/ShouldHaveCats';
+import Footer from '../components/Footer';
 
 const Home =()=>{
     return(
@@ -11,6 +12,7 @@ const Home =()=>{
             </div>
             <SideBar/>
             <ShouldHaveCats/>
+            <Footer/>
         </SC.BoxCont>
     )
 }

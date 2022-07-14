@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface Props{
+    backgroundColor?:string,
+    border?:string
+}
 export const BoxCont = styled.div`
     display:flex;
     flex-direction:column;
@@ -49,8 +53,8 @@ export const ContainerDivs=styled.div`
     flex-direction:column;
     padding:10px 70px 0px 70px;
     color:#291507;
-    gap:4rem;
-    height:42.9rem;
+    gap:3rem;
+    height:42rem;
     border-radius:0px 0px 70px 70px;
     .div1{
         font-weight:500;
@@ -82,8 +86,9 @@ export const DivBreedsMas=styled.div`
 export const ButtonG=styled.button`
     display:flex;
     align-items:center;
-    background-color:#E3E1DC;
-    border:1px solid #E3E1DC;
+    padding-top: ;
+    background-color:${({ backgroundColor }: Props) => backgroundColor ? backgroundColor : '#E3E1DC'};
+    border:${({ border }: Props) => border ? border : '1px solid #E3E1DC'};
     cursor:pointer;
     color:rgba(41, 21, 7, 0.6);
     font-size:18px;
@@ -122,18 +127,64 @@ export const ImgCats=styled.div`
 export const ContainerSHC=styled.div`
     display:flex;
     flex-direction:row;
-    align-items:center;
+    padding-top:5rem;
+    padding-bottom:5rem;
 `;
 export const SHCTexto=styled.div`
     display:flex;
     flex-direction:column;
-    gap:1rem;
-    align-items:center;
-    width:45%;
-    padding:0px 70px 0px 70px;
+    width:50%;
+    padding:60px 70px 0px 70px;
+    gap:2rem;
     .raya{
         width:59.18px;
         height:3.21px;
         background-color:#4D270C;
+    }
+    >h1{
+        font-size:48px;
+        font-weight:700;
+    }
+    >h3{
+        font-size:18px;
+        font-weight:500
+    }
+`;
+export const SCHImg=styled.div`
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+`;
+export const SCHImg1=styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:1rem;
+    .img3{
+        padding-left:20px
+    }
+`;
+export const FooterL=styled.div`
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color:#000000;
+    padding:0px 70px 0px 70px;
+    align-items:center;
+    height:120px;
+    border-radius:70px 70px 0 0;
+    .cat{
+            filter: brightness(0) invert(1);
+    }
+    div{
+        color:white;
+        font-weight:700;
+        font-size:18px;
+        display:flex;
+        align-items: center;
+        gap:.5rem;
+        span{
+            font-weight:400;
+        }
     }
 `;
