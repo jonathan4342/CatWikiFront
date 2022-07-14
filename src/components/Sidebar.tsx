@@ -47,7 +47,7 @@ const SideBar = () => {
                     </div>
                 </SC.DivBreedsMas>
                 <SC.ContainerImgCats>
-                    <div className='raya2'></div>
+                    {/* <div className='raya-2'></div> */}
                     <SC.ImgCats>
                         {
                             catsHome?.map(e => <Cat key={e.id}{...e} />)

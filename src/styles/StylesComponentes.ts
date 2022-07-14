@@ -100,10 +100,11 @@ export const ButtonG=styled.button`
 export const ContainerImgCats=styled.div`
     display:flex;
     flex-direction:row;
-    align-items:center;
-    .raya2{
-        background-color:red;
-        heigth:10.9rem;
+    align-items:initial;
+    .raya-2{
+        background-color:#DEC68B;
+        height:174px;
+        width:20px;
     }
 `;
 export const CatImgs=styled.div`
@@ -115,9 +116,14 @@ export const CatImgs=styled.div`
     font-weight:600;
     color:#291507;
     gap:.5rem;
+    .link{
+        text-decoration: none;
+        color:#291507
+    }
     .imgcat{
         border-radius:24px
     }
+    
 `;
 export const ImgCats=styled.div`
     display:grid;
