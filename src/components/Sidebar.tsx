@@ -1,20 +1,20 @@
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
 import * as SC from '../styles/StylesComponentes'
 import logo from '../HeroImagelg.png'
 import logoC from '../CatwikiLogo.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-// import { getCats } from '../store/slice/Slice';
+import { getCats } from '../store/slice/Slice';
+import { useAppDispatch, useAppSelector } from '../store/store';
+import Cat from './Cat';
 
 const SideBar = () => {
 
-    const dispatch=useDispatch()
-
-    // useEffect(() => {
-    //     dispatch(getCats())
-    // },[dispatch])
+    const dispatch = useAppDispatch()
+    const { cats } = useAppSelector().catSlice
+    const catsHome = cats.slice(0, 4)
+    useEffect(() => {
+        dispatch(getCats())
+    }, [])
 
     return (
         <>
@@ -26,16 +26,7 @@ const SideBar = () => {
                         Get to know more about your cat breed
                     </h1>
                 </div>
-                <div className='input'>
-                    <Autocomplete
-                        disablePortal
-                        id="combo-box-demo"
-                        options={top100Films}
-                        sx={{ width: 500 }}
-                        renderInput={(params) => <TextField {...params} label="Enter your breed"
-                        />}
-                    />
-                </div>
+
             </SC.ContainerInput>
             <SC.ContainerDivs>
                 <div className="div-1">
@@ -55,6 +46,14 @@ const SideBar = () => {
                         </SC.ButtonG>
                     </div>
                 </SC.DivBreedsMas>
+                <SC.ContainerImgCats>
+                    <div className='raya2'></div>
+                    <SC.ImgCats>
+                        {
+                            catsHome?.map(e => <Cat key={e.id}{...e} />)
+                        }
+                    </SC.ImgCats>
+                </SC.ContainerImgCats>
             </SC.ContainerDivs>
         </>
     )

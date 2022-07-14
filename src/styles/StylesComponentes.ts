@@ -4,6 +4,7 @@ export const BoxCont = styled.div`
     display:flex;
     flex-direction:column;
     position:absolute;
+    padding: 1rem 5rem 0rem 5rem;
     .logo{
         width:10rem;
         height: 4rem;
@@ -48,7 +49,7 @@ export const ContainerDivs=styled.div`
     flex-direction:column;
     padding:10px 70px 0px 70px;
     color:#291507;
-    gap:2rem;
+    gap:4rem;
     height:42.9rem;
     border-radius:0px 0px 70px 70px;
     .div1{
@@ -89,5 +90,50 @@ export const ButtonG=styled.button`
     font-weight:700;
     .arrow{
         font-size:30px
+    }
+`;
+export const ContainerImgCats=styled.div`
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    .raya2{
+        background-color:red;
+        heigth:10.9rem;
+    }
+`;
+export const CatImgs=styled.div`
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    font-size:18px;
+    font-family:Montserrat;
+    font-weight:600;
+    color:#291507;
+    gap:.5rem;
+    .imgcat{
+        border-radius:24px
+    }
+`;
+export const ImgCats=styled.div`
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:2rem
+`;
+export const ContainerSHC=styled.div`
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+`;
+export const SHCTexto=styled.div`
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    align-items:center;
+    width:45%;
+    padding:0px 70px 0px 70px;
+    .raya{
+        width:59.18px;
+        height:3.21px;
+        background-color:#4D270C;
     }
 `;

@@ -10,9 +10,9 @@ export const GlobalStyles = createGlobalStyle`
     }
     body{
         margin: 0;
-        padding: 1rem 5rem 0rem 5rem;
         background-color: white;
         font-family:'Montserrat';
+        color:#291507
     }
     * {
         margin: 0;

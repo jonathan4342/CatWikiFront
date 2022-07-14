@@ -20,12 +20,13 @@ export const {setCats}=catSlice.actions;
 
 export default catSlice.reducer;
 
-// export const getCats=createAsyncThunk(
-//     'breeds',
-//     async(dispatch:any)=>{
-//         const {data}=await axios.get(`http://localhost:3001/breeds`)
-//         return dispatch(setCats(data))
-//     }
-// )
+export const getCats=createAsyncThunk(
+    'breeds',
+    async(id,thunkAPI)=>{
+        const {dispatch}=thunkAPI;
+        const {data}=await axios.get(`http://localhost:3001/breeds`)
+        dispatch(setCats(data))
+    }
+)
 
 
