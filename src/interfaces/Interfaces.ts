@@ -1,5 +1,7 @@
 export interface InitialCats {
-    cats:CatsProps[]
+    cats:CatsProps[],
+    catId:CatsProps[] ,
+    catImg:[] 
 }
 
 export interface CatsProps{

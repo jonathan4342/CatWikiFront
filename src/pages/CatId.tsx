@@ -1,13 +1,37 @@
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Logo from '../components/Logo';
+import { getCatId, getCatIdImg } from '../store/slice/Slice';
+import { useAppDispatch, useAppSelector } from '../store/store';
 import * as SC from '../styles/StylesComponentes';
 
 
 const CatId = () => {
+    const name = useParams().id;
+
+    const dispatch = useAppDispatch()
+    const { catId } = useAppSelector().catSlice
+
+    const cat = catId.find(e => e.id)
+
+    useEffect(() => {
+        dispatch(getCatId(name as string));
+    }, [name])
+
+    useEffect(() => {
+        dispatch(getCatIdImg(cat?.id as string));
+    }, [name])
+
     return (
         <SC.BoxCont>
             <Logo />
-            <Footer/>
+            <SC.ContainerSHC paddingRight='100px' paddingLeft='10px'>
+                <SC.CatIdImg>
+                    <img src={cat?.img} alt="img" width='371px' height='371px'/>
+                </SC.CatIdImg>
+            </SC.ContainerSHC>
+            <Footer />
         </SC.BoxCont>
     )
 }

@@ -4,6 +4,12 @@ interface Props{
     backgroundColor?:string,
     border?:string
 }
+interface PropsSCH{
+    paddingTop?:string,
+    paddingBottom?:string,
+    paddingLeft?:string,
+    paddingRight?:string
+}
 export const BoxCont = styled.div`
     display:flex;
     flex-direction:column;
@@ -133,8 +139,10 @@ export const ImgCats=styled.div`
 export const ContainerSHC=styled.div`
     display:flex;
     flex-direction:row;
-    padding-top:5rem;
-    padding-bottom:5rem;
+    padding-top:${({paddingTop}:PropsSCH)=> paddingTop ?paddingTop:'5rem'}
+    padding-bottom:${({paddingBottom}:PropsSCH)=> paddingBottom ?paddingBottom:'5rem'}
+    padding-left:${({paddingLeft}:PropsSCH)=> paddingLeft ?paddingLeft:'0'}
+    padding-right:${({paddingRight}:PropsSCH)=> paddingRight? paddingRight:'0'}
 `;
 export const SHCTexto=styled.div`
     display:flex;
@@ -179,6 +187,7 @@ export const FooterL=styled.div`
     align-items:center;
     height:120px;
     border-radius:70px 70px 0 0;
+    width:1200px;
     .cat{
             filter: brightness(0) invert(1);
     }
@@ -192,5 +201,12 @@ export const FooterL=styled.div`
         span{
             font-weight:400;
         }
+    }
+`;
+export const CatIdImg=styled.div`
+    display:flex;
+    flex-direction:row;
+    img{
+        border-radius:24px
     }
 `;
