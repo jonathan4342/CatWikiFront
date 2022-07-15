@@ -5,6 +5,7 @@ interface Props {
     border?: string
 }
 interface PropsSCH {
+    
     paddingTop?: string,
     paddingBottom?: string,
     paddingLeft?: string,
