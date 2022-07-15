@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-interface Props{
-    backgroundColor?:string,
-    border?:string
+interface Props {
+    backgroundColor?: string,
+    border?: string
 }
-interface PropsSCH{
-    paddingTop?:string,
-    paddingBottom?:string,
-    paddingLeft?:string,
-    paddingRight?:string
+interface PropsSCH {
+    paddingTop?: string,
+    paddingBottom?: string,
+    paddingLeft?: string,
+    paddingRight?: string
 }
 export const BoxCont = styled.div`
     display:flex;
@@ -28,6 +28,7 @@ export const ContainerInput = styled.div`
     font-size:18px;
     >img{
         border-radius:70px 70px 0 0;
+        width:100%;
     }
     .input{
         position: absolute;
@@ -43,7 +44,6 @@ export const ContainerInput = styled.div`
         left:70px;
         top:70px;
         color:white;
-        dispay:flex;
         flex-direction: row;
         width:50%;
         img{ 
@@ -53,7 +53,7 @@ export const ContainerInput = styled.div`
     }
     
 `;
-export const ContainerDivs=styled.div`
+export const ContainerDivs = styled.div`
     display:flex;
     background-color:#E3E1DC;
     flex-direction:column;
@@ -76,7 +76,7 @@ export const ContainerDivs=styled.div`
         flex-direction:column;
     }
 `;
-export const DivBreedsMas=styled.div`
+export const DivBreedsMas = styled.div`
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -89,10 +89,9 @@ export const DivBreedsMas=styled.div`
         width:50%
     }
 `;
-export const ButtonG=styled.button`
+export const ButtonG = styled.button`
     display:flex;
     align-items:center;
-    padding-top: ;
     background-color:${({ backgroundColor }: Props) => backgroundColor ? backgroundColor : '#E3E1DC'};
     border:${({ border }: Props) => border ? border : '1px solid #E3E1DC'};
     cursor:pointer;
@@ -103,7 +102,7 @@ export const ButtonG=styled.button`
         font-size:30px
     }
 `;
-export const ContainerImgCats=styled.div`
+export const ContainerImgCats = styled.div`
     display:flex;
     flex-direction:row;
     align-items:initial;
@@ -113,7 +112,7 @@ export const ContainerImgCats=styled.div`
         width:20px;
     }
 `;
-export const CatImgs=styled.div`
+export const CatImgs = styled.div`
     display:flex;
     flex-direction:column;
     cursor:pointer;
@@ -131,20 +130,22 @@ export const CatImgs=styled.div`
     }
     
 `;
-export const ImgCats=styled.div`
+export const ImgCats = styled.div`
     display:grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap:2rem
 `;
-export const ContainerSHC=styled.div`
+
+export const ContainerSHC = styled.div`
     display:flex;
     flex-direction:row;
-    padding-top:${({paddingTop}:PropsSCH)=> paddingTop ?paddingTop:'5rem'}
-    padding-bottom:${({paddingBottom}:PropsSCH)=> paddingBottom ?paddingBottom:'5rem'}
-    padding-left:${({paddingLeft}:PropsSCH)=> paddingLeft ?paddingLeft:'0'}
-    padding-right:${({paddingRight}:PropsSCH)=> paddingRight? paddingRight:'0'}
+    padding-top:${({ paddingTop }: PropsSCH) => paddingTop ? paddingTop : '5rem'};
+    padding-bottom:${({ paddingBottom }: PropsSCH) => paddingBottom ? paddingBottom : '5rem'};
+    padding-left:${({ paddingLeft }: PropsSCH) => paddingLeft ? paddingLeft : '0'};
+    padding-right:${({ paddingRight }: PropsSCH) => paddingRight ? paddingRight : '0'};
 `;
-export const SHCTexto=styled.div`
+
+export const SHCTexto = styled.div`
     display:flex;
     flex-direction:column;
     width:50%;
@@ -164,12 +165,12 @@ export const SHCTexto=styled.div`
         font-weight:500
     }
 `;
-export const SCHImg=styled.div`
+export const SCHImg = styled.div`
     display:flex;
     flex-direction:row;
     align-items:center;
 `;
-export const SCHImg1=styled.div`
+export const SCHImg1 = styled.div`
     display:flex;
     flex-direction:column;
     align-items:flex-end;
@@ -178,7 +179,7 @@ export const SCHImg1=styled.div`
         padding-left:20px
     }
 `;
-export const FooterL=styled.div`
+export const FooterL = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -203,7 +204,7 @@ export const FooterL=styled.div`
         }
     }
 `;
-export const CatIdImg=styled.div`
+export const CatIdImg = styled.div`
     display:flex;
     flex-direction:row;
     img{

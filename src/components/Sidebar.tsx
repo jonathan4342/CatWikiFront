@@ -14,7 +14,7 @@ const SideBar = () => {
     const catsHome = cats.slice(0, 4)
     useEffect(() => {
         dispatch(getCats())
-    }, [])
+    }, [dispatch])
 
     return (
         <>
