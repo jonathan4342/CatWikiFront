@@ -189,7 +189,7 @@ export const FooterL = styled.div`
     align-items:center;
     height:120px;
     border-radius:70px 70px 0 0;
-    width:1200px;
+    width:100%;
     .cat{
             filter: brightness(0) invert(1);
     }
