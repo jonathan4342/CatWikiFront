@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         background-color: white;
         font-family:'Montserrat';
-        color:#291507
+        color:#291507;
     }
     * {
         margin: 0;

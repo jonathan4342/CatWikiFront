@@ -21,10 +21,14 @@ export const catSlice= createSlice({
         setCatImg:(initialState,{payload})=>{
             initialState.catImg=payload
         },
+        setNull:(initialState,{payload})=>{
+            initialState.catId=payload,
+            initialState.catImg=payload
+        }
     }
 })
 
-export const {setCats,setCatId,setCatImg}=catSlice.actions;
+export const {setCats,setCatId,setCatImg,setNull}=catSlice.actions;
 
 export default catSlice.reducer;
 
@@ -52,6 +56,14 @@ export const getCatIdImg=createAsyncThunk(
         dispatch(setCatImg(data))
     }
 )
+export const clearCatId=createAsyncThunk(
+    'clearId',
+    async(id,thunkAPI)=>{
+        const{dispatch}=thunkAPI;
+        dispatch(setNull(null))
+    }
+)
+
 
 
 

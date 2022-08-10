@@ -1,7 +1,7 @@
 export interface InitialCats {
     cats:CatsProps[],
-    catId:CatsProps[] ,
-    catImg:[] 
+    catId:CatsProps[] | null,
+    catImg:[] | null
 }
 
 export interface CatsProps{
@@ -20,3 +20,4 @@ export interface CatsProps{
     socialNeeds:number,
     strangerFriendly:number,
 }
+
