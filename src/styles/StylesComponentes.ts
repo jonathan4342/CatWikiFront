@@ -145,6 +145,7 @@ export const ContainerSHC = styled.div`
     padding-bottom:${({ paddingBottom }: PropsSCH) => paddingBottom ? paddingBottom : '5rem'};
     padding-left:${({ paddingLeft }: PropsSCH) => paddingLeft ? paddingLeft : '0'};
     padding-right:${({ paddingRight }: PropsSCH) => paddingRight ? paddingRight : '0'};
+    gap:5rem;
 `;
 
 export const SHCTexto = styled.div`
@@ -247,4 +248,19 @@ margin-right: 8px;
     width: 45px;
 }
 
+`;
+export const CatDetails=styled.div`
+display:flex;
+flex-direction: column;
+gap:1rem;
+
+`;
+export const ContDivCat=styled.div`
+display:flex;
+flex-direction:row;
+gap:.5rem;
+.title{
+    color:#000000;
+    font-weight: 700;
+}
 `;
