@@ -22,6 +22,10 @@ export const BoxCont = styled.div`
         height: 4rem;
         cursor:pointer;
     }
+    .h1{
+        font-weight:600;
+        font-size:36px;
+    }
 `;
 export const ContainerInput = styled.div`
     display:flex;
@@ -263,4 +267,7 @@ gap:.5rem;
     color:#000000;
     font-weight: 700;
 }
+`;
+export const ContainerCatImg=styled.div`
+
 `;

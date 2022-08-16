@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
+import { Images } from '../components/img/Images';
 import { OpacityLoader } from '../components/loaders/OpacityLoader';
 import Logo from '../components/Logo';
 import { Scale } from '../components/Scale';
@@ -50,9 +51,10 @@ const CatId = () => {
                             </SC.ContDivCat>
                             {/* <Scale props={cat?.intelligence}/> */}
                         </SC.CatDetails>
+                        
                     </SC.ContainerSHC>
             }
-
+            <Images/>
             <Footer />
         </SC.BoxCont>
     )
