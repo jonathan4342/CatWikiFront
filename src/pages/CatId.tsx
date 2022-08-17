@@ -24,7 +24,7 @@ const CatId = () => {
 
     useEffect(() => {
         dispatch(getCatIdImg(cat?.id as string));
-    }, [name])
+    }, [])
     return (
         <SC.BoxCont>
             <Logo />
@@ -49,7 +49,7 @@ const CatId = () => {
                                 <div className='title'>Life span:</div>
                                 <div>{cat?.lifeSpan} years</div>
                             </SC.ContDivCat>
-                            {/* <Scale props={cat?.intelligence}/> */}
+                            <Scale props={cat?.intelligence}/>
                         </SC.CatDetails>
                         
                     </SC.ContainerSHC>

@@ -29,4 +29,12 @@ export const GlobalStyles = createGlobalStyle`
         top: 0px;
         left: 0
     }
+    .imgCat{
+        border-radius:24px;
+    }
+    .conCat{
+        display:grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap:2.5rem
+    }
     `

@@ -17,6 +17,7 @@ export const BoxCont = styled.div`
     position:absolute;
     padding: 1rem 5rem 0rem 5rem;
     width:100%;
+    gap:2rem;
     .logo{
         width:10rem;
         height: 4rem;

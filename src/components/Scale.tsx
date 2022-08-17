@@ -2,7 +2,7 @@ import React from 'react'
 import * as SC from '../styles/StylesComponentes'
 
 
-export const Scale = (number:number) => {
+export const Scale = (number:any) => {
 
     let arr=[];
 
