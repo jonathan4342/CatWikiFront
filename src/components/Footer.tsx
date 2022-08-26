@@ -8,7 +8,7 @@ const Footer = () => {
                 <img src={logo} alt="img" className='cat' />
             </div>
             <div>
-            <CopyrightIcon/> <span> create by</span> Jonathan Osorio <span> - devChanllenge.io 2021</span>
+                <CopyrightIcon /> <span> create by</span> Jonathan Osorio <span> - devChanllenge.io 2021</span>
             </div>
         </SC.FooterL>
     )

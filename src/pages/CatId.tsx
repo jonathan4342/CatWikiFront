@@ -5,8 +5,9 @@ import { Images } from '../components/img/Images';
 import { OpacityLoader } from '../components/loaders/OpacityLoader';
 import Logo from '../components/Logo';
 import { Scale } from '../components/Scale';
-import { getCatId, getCatIdImg } from '../store/slice/Slice';
-import { useAppDispatch, useAppSelector } from '../store/store';
+import { getCatId, getCatIdImg } from '../redux/actions/Actions';
+import { setNull } from '../redux/slice/Slice';
+import { useAppDispatch, useAppSelector } from '../redux/store';
 import * as SC from '../styles/StylesComponentes';
 
 
@@ -20,16 +21,17 @@ const CatId = () => {
 
     useEffect(() => {
         dispatch(getCatId(name as string));
-    }, [name])
+    }, [name, dispatch])
 
     useEffect(() => {
         dispatch(getCatIdImg(cat?.id as string));
-    }, [])
+    }, [dispatch, cat?.id])
+
     return (
         <SC.BoxCont>
             <Logo />
             {
-                catId?.length == 0 ? <OpacityLoader /> :
+                catId?.length === 0 ? <OpacityLoader /> :
                     <SC.ContainerSHC paddingRight='100px' paddingLeft='10px' paddingTop='0'>
                         <SC.CatIdImg>
                             <img src={cat?.img} alt="img" width='371px' height='371px' />
@@ -49,12 +51,18 @@ const CatId = () => {
                                 <div className='title'>Life span:</div>
                                 <div>{cat?.lifeSpan} years</div>
                             </SC.ContDivCat>
-                            <Scale props={cat?.intelligence}/>
+                            <Scale num={cat?.adaptability} text='adaptability' />
+                            <Scale num={cat?.affectionLevel} text='Affection level' />
+                            <Scale num={cat?.childFriendly} text='Child Friendly' />
+                            <Scale num={cat?.grooming} text='Grooming' />
+                            <Scale num={cat?.intelligence} text='Intelligence' />
+                            <Scale num={cat?.healthIssues} text='Health issues' />
+                            <Scale num={cat?.socialNeeds} text='Social needs' />
+                            <Scale num={cat?.strangerFriendly} text='Strager friendly' />
                         </SC.CatDetails>
-                        
                     </SC.ContainerSHC>
             }
-            <Images/>
+            <Images />
             <Footer />
         </SC.BoxCont>
     )

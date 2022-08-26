@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     *, *:before, *:after {
         box-sizing: inherit;
     }
+    
     body{
         margin: 0;
         background-color: white;

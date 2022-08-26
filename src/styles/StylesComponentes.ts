@@ -5,7 +5,7 @@ interface Props {
     border?: string
 }
 interface PropsSCH {
-    
+
     paddingTop?: string,
     paddingBottom?: string,
     paddingLeft?: string,
@@ -219,11 +219,22 @@ export const CatIdImg = styled.div`
         border-radius:24px
     }
 `;
-export const ScaleCont=styled.div`
+export const ScaleCont = styled.div`
 display: flex;
 flex-direction: row;
+align-items: center;
+justify-content: space-between;
+.contTex{
+    font-size:16px;
+    font-weight:700;
+    padding-right: 50px;
+}
+.contLine{
+    display: flex;
+    flex-direction:row;
+}
 `;
-export const Line=styled.div`
+export const Line = styled.div`
 width: 80px;
 height: 12px;    
 background-color: #544439;
@@ -238,7 +249,7 @@ margin-right: 8px;
     width: 45px;
 }
 `;
-export const LineNull=styled.div`
+export const LineNull = styled.div`
 width: 80px;
 height: 12px;    
 background-color: #E0E0E0;
@@ -254,13 +265,13 @@ margin-right: 8px;
 }
 
 `;
-export const CatDetails=styled.div`
+export const CatDetails = styled.div`
 display:flex;
 flex-direction: column;
-gap:1rem;
+gap:2rem;
 
 `;
-export const ContDivCat=styled.div`
+export const ContDivCat = styled.div`
 display:flex;
 flex-direction:row;
 gap:.5rem;
@@ -268,7 +279,4 @@ gap:.5rem;
     color:#000000;
     font-weight: 700;
 }
-`;
-export const ContainerCatImg=styled.div`
-
 `;

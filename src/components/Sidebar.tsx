@@ -3,12 +3,12 @@ import logo from '../HeroImagelg.png'
 import logoC from '../CatwikiLogo.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useEffect } from 'react';
-import { getCats } from '../store/slice/Slice';
-import { useAppDispatch, useAppSelector } from '../store/store';
+import { useAppDispatch, useAppSelector } from '../redux/store';
 import Cat from './Cat';
 import img1 from '../image1.png';
 import img2 from '../image2.png';
 import img3 from '../image3.png';
+import { getCats } from '../redux/actions/Actions';
 
 const SideBar = () => {
 
