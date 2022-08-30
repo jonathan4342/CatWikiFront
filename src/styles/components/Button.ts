@@ -13,6 +13,10 @@ export const ButtonG = styled.button`
     color:rgba(41, 21, 7, 0.6);
     font-size:18px;
     font-weight:700;
+    a{
+        text-decoration:none;
+        color:rgba(41, 21, 7, 0.6);
+    }
     .arrow{
         font-size:30px;
         @media(max-width:640px){
