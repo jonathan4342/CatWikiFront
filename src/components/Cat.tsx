@@ -5,7 +5,7 @@ const Cat = (props: CatsProps) => {
     return (
         <SC.CatImgs>
             <Link to={`/breed/${props.name}`} className='link'>
-                <img src={props.img} alt="img" width='220px' height='220px' className='imgcat' />
+                <img src={props.img} alt="img"  className='imgcat' />
                 <h2>{props.name}</h2>
             </Link>
         </SC.CatImgs>

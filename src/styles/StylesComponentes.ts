@@ -25,27 +25,24 @@ export const BoxCont = styled.div`
     }
     .h1{
         font-weight:600;
-        font-size:36px;
+        font-size:2.25rem;
     }
+
+    
 `;
 export const ContainerInput = styled.div`
     display:flex;
     position:relative;
     font-weight:500;
     font-size:18px;
+    @media (max-width:600px) {
+        font-size:7px;
+    }
     >img{
         border-radius:70px 70px 0 0;
         width:100%;
     }
-    .input{
-        position: absolute;
-        top:350px;
-        left:70px;
-        background-color:white;
-        border-radius:20px;
-        border:1px solid black;
-        
-    }
+    
     .cat{
         position: absolute;
         left:70px;
@@ -53,10 +50,32 @@ export const ContainerInput = styled.div`
         color:white;
         flex-direction: row;
         width:50%;
+        @media (max-width:600px) {
+            left:30px;
+            top: 30px;
+        }
         img{ 
             filter: brightness(0) invert(1);
-            width:400px;
+            width:25rem;
+
+            @media (max-width:600px) {
+                width:10rem;
+            }
         }
+        .input{
+        position: absolute;
+        background-color:white;
+        border-radius:20px;
+        margin-top: 30px;
+        width:394px;
+        height:69px;
+        border: 1px solid white;
+        @media (max-width:600px) {
+            width:150px;
+            height:30px;
+            margin-top: 10px;
+        }
+    }
     }
     
 `;
@@ -69,14 +88,27 @@ export const ContainerDivs = styled.div`
     gap:3rem;
     height:42rem;
     border-radius:0px 0px 70px 70px;
+    @media (max-width:600px) {
+        padding:4px 28px 0px 28px;
+        gap:1rem;
+        height:31rem;
+    }
     .div1{
         font-weight:500;
         font-size:18px;
+        @media (max-width:600px) {
+            font-size: 12px;
+            
+        }
     }
     .raya{
         width:59.18px;
         height:3.21px;
         background-color:#4D270C;
+        @media (max-width:600px) {
+            width: 40px;
+            
+        }
     }
     .div-1{
         display:flex;
@@ -91,6 +123,9 @@ export const DivBreedsMas = styled.div`
     div h2{
         font-size:48px;
         font-weight:700;
+        @media (max-width:600px){
+            font-size: 18px;
+        }
     }
     .DivBreedsMas1{
         width:50%
@@ -106,8 +141,51 @@ export const ButtonG = styled.button`
     font-size:18px;
     font-weight:700;
     .arrow{
-        font-size:30px
+        font-size:30px;
+        @media(max-width:600px){
+        font-size:20px
     }
+    }
+    @media(max-width:600px){
+        font-size:12px
+    }
+`;
+export const ImgCats = styled.div`
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:2rem;
+    @media(max-width:600px){
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap:2rem;
+    }
+`;
+export const CatImgs = styled.div`
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+    font-size:18px;
+    font-family:Montserrat;
+    font-weight:600;
+    color:#291507;
+    /* gap:2rem; */
+    @media (max-width:600px){
+        font-size:12px
+    }
+    .link{
+        text-decoration: none;
+        color:#291507
+    }
+    .imgcat{
+        border-radius:24px;
+        width:220px; 
+        height:220px;
+        @media (max-width:600px){
+            width:134px;
+            height:134px;
+            border-radius:12px;
+        }
+    }
+    
 `;
 export const ContainerImgCats = styled.div`
     display:flex;
@@ -119,30 +197,6 @@ export const ContainerImgCats = styled.div`
         width:20px;
     }
 `;
-export const CatImgs = styled.div`
-    display:flex;
-    flex-direction:column;
-    cursor:pointer;
-    font-size:18px;
-    font-family:Montserrat;
-    font-weight:600;
-    color:#291507;
-    gap:.5rem;
-    .link{
-        text-decoration: none;
-        color:#291507
-    }
-    .imgcat{
-        border-radius:24px
-    }
-    
-`;
-export const ImgCats = styled.div`
-    display:grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap:2rem
-`;
-
 export const ContainerSHC = styled.div`
     display:flex;
     flex-direction:row;
@@ -150,27 +204,52 @@ export const ContainerSHC = styled.div`
     padding-bottom:${({ paddingBottom }: PropsSCH) => paddingBottom ? paddingBottom : '5rem'};
     padding-left:${({ paddingLeft }: PropsSCH) => paddingLeft ? paddingLeft : '0'};
     padding-right:${({ paddingRight }: PropsSCH) => paddingRight ? paddingRight : '0'};
-    gap:5rem;
-`;
+    @media(max-width:600px){
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        flex-direction: column;
+    }
+    .SCHImg{
+        display: flex;
+        flex-direction: row;
+        @media (max-width:600px){
+            padding-left: 25px;
+        }
 
+    }
+`;
 export const SHCTexto = styled.div`
     display:flex;
     flex-direction:column;
     width:50%;
     padding:60px 70px 0px 70px;
     gap:2rem;
+    @media(max-width:600px){
+        width:100%;
+        padding:20px 28px 20px 28px;
+        gap:1rem;
+    }
     .raya{
         width:59.18px;
         height:3.21px;
         background-color:#4D270C;
+        @media(max-width:600px){
+            width:50px;
+        }
     }
     >h1{
         font-size:48px;
         font-weight:700;
+        @media(max-width:600px){
+            font-size:43px;
+        }
     }
     >h3{
         font-size:18px;
-        font-weight:500
+        font-weight:500;
+        @media (max-width:600px) {
+            font-size: 15px;
+        }
     }
 `;
 export const SCHImg = styled.div`
@@ -183,8 +262,31 @@ export const SCHImg1 = styled.div`
     flex-direction:column;
     align-items:flex-end;
     gap:1rem;
+    
+    .img1{
+        width:273px;
+        height:167px;
+        @media(max-width:600px){
+            width:172px;
+            height:105px;
+        }
+    }
+    .img2{
+        width:195px;
+        height:293px;
+        @media(max-width:600px){
+            width:122px;
+            height:184px;
+        }
+    }
     .img3{
-        padding-left:20px
+        padding-left:20px;
+        width:238px;
+        height:385px;
+        @media(max-width:600px){
+            width:149px;
+            height:242px;
+        }
     }
 `;
 export const FooterL = styled.div`
@@ -197,6 +299,12 @@ export const FooterL = styled.div`
     height:120px;
     border-radius:70px 70px 0 0;
     width:100%;
+    @media(max-width:600px){
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        padding:0px 28px 0px 60px;
+    }
     .cat{
             filter: brightness(0) invert(1);
     }
@@ -207,8 +315,12 @@ export const FooterL = styled.div`
         display:flex;
         align-items: center;
         gap:.5rem;
+        @media(max-width:600px){
+            font-size:10px;
+        }
         span{
             font-weight:400;
+            
         }
     }
 `;

@@ -6,7 +6,6 @@ import { OpacityLoader } from '../components/loaders/OpacityLoader';
 import Logo from '../components/Logo';
 import { Scale } from '../components/Scale';
 import { getCatId, getCatIdImg } from '../redux/actions/Actions';
-import { setNull } from '../redux/slice/Slice';
 import { useAppDispatch, useAppSelector } from '../redux/store';
 import * as SC from '../styles/StylesComponentes';
 
