@@ -1,4 +1,4 @@
-import {BoxCont}from '../styles/StylesGlobalComponentes';
+import {BoxCont}from '../styles/globals/StylesGlobalComponentes';
 import Logo from '../components/Logo'
 import SideBar from '../components/Sidebar'
 import Footer from '../components/Footer';
@@ -17,7 +17,7 @@ const Home = () => {
             <Logo />
             <SideBar />
             <Footer />
-        </BoxCont>
+        </ BoxCont>
     )
 }
 export default Home;
