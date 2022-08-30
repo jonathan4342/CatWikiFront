@@ -1,4 +1,4 @@
-import * as SC from '../styles/StylesComponentes'
+import * as SC from '../styles'
 import logo from '../CatwikiLogo.svg'
 import CopyrightIcon from '@mui/icons-material/Copyright';
 const Footer = () => {

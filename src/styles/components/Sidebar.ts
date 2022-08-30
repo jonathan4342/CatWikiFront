@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-interface Props {
-    backgroundColor?: string,
-    border?: string
-}
+
 interface PropsSCH {
 
     paddingTop?: string,
@@ -11,32 +8,6 @@ interface PropsSCH {
     paddingLeft?: string,
     paddingRight?: string
 }
-export const BoxCont = styled.div`
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    padding: 0 5px;
-    width:100%;
-    gap:2rem;
-    @media (max-width:350px) {
-        gap:1rem
-    }
-    @media (min-width:1200px){
-        padding: 1rem 5rem 0rem 5rem;
-    }
-    .logo{
-        width:10rem;
-        height: 4rem;
-        cursor:pointer;
-        @media (max-width:350px){
-            width:7rem;
-        }
-    }
-    .h1{
-        font-weight:600;
-        font-size:2.25rem;
-    }
-`;
 export const ContainerInput = styled.div`
     display:flex;
     position:relative;
@@ -153,25 +124,6 @@ export const DivBreedsMas = styled.div`
     }
     .DivBreedsMas1{
         width:50%
-    }
-`;
-export const ButtonG = styled.button`
-    display:flex;
-    align-items:center;
-    background-color:${({ backgroundColor }: Props) => backgroundColor ? backgroundColor : '#E3E1DC'};
-    border:${({ border }: Props) => border ? border : '1px solid #E3E1DC'};
-    cursor:pointer;
-    color:rgba(41, 21, 7, 0.6);
-    font-size:18px;
-    font-weight:700;
-    .arrow{
-        font-size:30px;
-        @media(max-width:640px){
-        font-size:20px
-    }
-    }
-    @media(max-width:640px){
-        font-size:12px
     }
 `;
 export const ImgCats = styled.div`
@@ -312,107 +264,4 @@ export const SCHImg1 = styled.div`
             height:242px;
         }
     }
-`;
-export const FooterL = styled.div`
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    background-color:#000000;
-    padding:0px 70px 0px 70px;
-    align-items:center;
-    height:120px;
-    border-radius:70px 70px 0 0;
-    width:100%;
-    @media(max-width:640px){
-        flex-direction: column;
-        justify-content: center;
-        align-items:flex-start;
-        padding:0px 28px 0px 60px;
-    }
-    .cat{
-            filter: brightness(0) invert(1);
-    }
-    div{
-        color:white;
-        font-weight:700;
-        font-size:18px;
-        display:flex;
-        align-items: center;
-        gap:.5rem;
-        @media(max-width:640px){
-            font-size:10px;
-        }
-        span{
-            font-weight:400;
-            
-        }
-    }
-`;
-export const CatIdImg = styled.div`
-    display:flex;
-    flex-direction:row;
-    img{
-        border-radius:24px
-    }
-`;
-export const ScaleCont = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-.contTex{
-    font-size:16px;
-    font-weight:700;
-    padding-right: 50px;
-}
-.contLine{
-    display: flex;
-    flex-direction:row;
-}
-`;
-export const Line = styled.div`
-width: 80px;
-height: 12px;    
-background-color: #544439;
-border-radius: 8px;
-margin-right: 8px;
-@media (max-width: 590px) {
-    width: 50px; 
-}
-
-@media (max-width: 375px) {
-
-    width: 45px;
-}
-`;
-export const LineNull = styled.div`
-width: 80px;
-height: 12px;    
-background-color: #E0E0E0;
-border-radius: 8px;
-margin-right: 8px;
-@media (max-width: 590px) {
-    width: 50px; 
-}
-
-@media (max-width: 375px) {
-
-    width: 45px;
-}
-
-`;
-export const CatDetails = styled.div`
-display:flex;
-flex-direction: column;
-gap:2rem;
-
-`;
-export const ContDivCat = styled.div`
-display:flex;
-flex-direction:row;
-gap:.5rem;
-.title{
-    color:#000000;
-    font-weight: 700;
-}
 `;

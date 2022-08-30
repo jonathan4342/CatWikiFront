@@ -7,7 +7,7 @@ import Logo from '../components/Logo';
 import { Scale } from '../components/Scale';
 import { getCatId, getCatIdImg } from '../redux/actions/Actions';
 import { useAppDispatch, useAppSelector } from '../redux/store';
-import * as SC from '../styles/StylesComponentes';
+import * as SC from '../styles';
 
 
 const CatId = () => {

@@ -1,4 +1,4 @@
-import * as SC from '../styles/StylesComponentes'
+import * as SC from '../styles'
 import logo from '../HeroImagelg.png'
 import logoC from '../CatwikiLogo.svg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -9,7 +9,6 @@ import img1 from '../image1.png';
 import img2 from '../image2.png';
 import img3 from '../image3.png';
 import { getCats } from '../redux/actions/Actions';
-import { Autocomplete, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 

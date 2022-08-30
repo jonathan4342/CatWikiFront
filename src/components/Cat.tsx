@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { CatsProps } from "../interfaces/Interfaces"
-import * as SC from '../styles/StylesComponentes'
+import * as SC from '../styles'
 const Cat = (props: CatsProps) => {
     return (
         <SC.CatImgs>

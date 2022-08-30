@@ -1,4 +1,4 @@
-import * as SC from '../styles/StylesComponentes';
+import {BoxCont}from '../styles/StylesGlobalComponentes';
 import Logo from '../components/Logo'
 import SideBar from '../components/Sidebar'
 import Footer from '../components/Footer';
@@ -13,11 +13,11 @@ const Home = () => {
             dispatch(setNull())
     },[dispatch])
     return (
-        <SC.BoxCont>
+        <BoxCont>
             <Logo />
             <SideBar />
             <Footer />
-        </SC.BoxCont>
+        </BoxCont>
     )
 }
 export default Home;

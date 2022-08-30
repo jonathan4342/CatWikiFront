@@ -1,4 +1,4 @@
-import * as SC from '../styles/StylesComponentes'
+import * as SC from '../styles'
 
 
 export const Scale = ({ num, text }: any) => {

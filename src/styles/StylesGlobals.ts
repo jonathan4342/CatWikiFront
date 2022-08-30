@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 export const GlobalStyles = createGlobalStyle`
     html {
         box-sizing: border-box;
@@ -38,4 +37,4 @@ export const GlobalStyles = createGlobalStyle`
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap:2.5rem
     }
-    `
+`;
