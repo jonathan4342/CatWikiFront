@@ -260,24 +260,25 @@ export const SCHImg1 = styled.div`
         width:273px;
         height:167px;
         @media(max-width:640px){
-            width:172px;
-            height:105px;
+            width:150px;
+            height:83px;
         }
     }
     .img2{
         width:195px;
         height:293px;
         @media(max-width:640px){
-            width:122px;
-            height:184px;
+            width:98px;
+            height:160px;
         }
     }
     .img3{
         width:238px;
         height:385px;
         @media(max-width:640px){
-            width:149px;
-            height:242px;
+            width:107px;
+            height:200px;
+            padding-left: 10px;
         }
     }
 `;
