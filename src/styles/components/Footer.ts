@@ -12,11 +12,10 @@ export const FooterL = styled.div`
     height:120px;
     border-radius:70px 70px 0 0;
     width:100%;
-    @media(max-width:640px){
+    @media(max-width:375px){
         flex-direction: column;
         justify-content: center;
-        align-items:flex-start;
-        padding:0px 28px 0px 60px;
+        padding:0px 28px 0px 40px;
     }
     .cat{
             filter: brightness(0) invert(1);
@@ -28,7 +27,7 @@ export const FooterL = styled.div`
         display:flex;
         align-items: center;
         gap:.5rem;
-        @media(max-width:640px){
+        @media(max-width:375px){
             font-size:10px;
         }
         span{
