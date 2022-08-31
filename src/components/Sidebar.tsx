@@ -65,7 +65,7 @@ const SideBar = () => {
                         </SC.ImgCats>
                     </SC.ContainerImgCats>
                 </SC.ContainerDivs>
-                <SC.ContainerSHC>
+                <SC.ContainerSHC >
                     <SC.SHCTexto>
                         <span className='raya'></span>
                         <h1>Why should you have a cat?</h1>

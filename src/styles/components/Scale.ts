@@ -9,6 +9,9 @@ justify-content: space-between;
     font-size:16px;
     font-weight:700;
     padding-right: 50px;
+    @media (max-width:375px) {
+    font-size:12px;
+}
 }
 .contLine{
     display: flex;
@@ -21,14 +24,12 @@ height: 12px;
 background-color: #544439;
 border-radius: 8px;
 margin-right: 8px;
-@media (max-width: 590px) {
-    width: 50px; 
-}
-
 @media (max-width: 375px) {
-
-    width: 45px;
+    width: 20px; 
 }
+/* @media (max-width: 590px) {
+    width: 50px; 
+} */
 `;
 export const LineNull = styled.div`
 width: 80px;
@@ -36,13 +37,11 @@ height: 12px;
 background-color: #E0E0E0;
 border-radius: 8px;
 margin-right: 8px;
-@media (max-width: 590px) {
+/* @media (max-width: 590px) {
     width: 50px; 
-}
-
+} */
 @media (max-width: 375px) {
-
-    width: 45px;
+    width: 20px;
 }
 
 `;

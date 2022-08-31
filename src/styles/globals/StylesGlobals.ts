@@ -31,10 +31,27 @@ export const GlobalStyles = createGlobalStyle`
     }
     .imgCat{
         border-radius:24px;
+        width:278px; 
+        height:278px;
+        @media (max-width:375px){
+            width:100px;
+            height:100px;
+        }
     }
     .conCat{
-        display:grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap:2.5rem
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:2rem;
+    @media (max-width:375px){
+        grid-template-columns: repeat(2,minmax(0, 1fr));
+        gap:1rem
     }
+}
+.otherPhotos{
+    font-weight:600;
+    font-size:36px;
+    @media (max-width:375px){
+        font-size: 20px;
+    }
+}
 `;

@@ -4,7 +4,10 @@ interface PropsSCH {
     paddingTop?: string,
     paddingBottom?: string,
     paddingLeft?: string,
-    paddingRight?: string
+    paddingRight?: string,
+    gap?:string,
+    flexDirection?: string,
+    alignItems?: string
 }
 export const ContainerInput = styled.div`
     display:flex;
@@ -176,11 +179,12 @@ export const ContainerImgCats = styled.div`
 `;
 export const ContainerSHC = styled.div`
     display:flex;
-    flex-direction:row;
+    flex-direction:${({flexDirection}:PropsSCH)=> flexDirection?flexDirection:'row'};
     padding-top:${({ paddingTop }: PropsSCH) => paddingTop ? paddingTop : '5rem'};
     padding-bottom:${({ paddingBottom }: PropsSCH) => paddingBottom ? paddingBottom : '5rem'};
     padding-left:${({ paddingLeft }: PropsSCH) => paddingLeft ? paddingLeft : '0'};
     padding-right:${({ paddingRight }: PropsSCH) => paddingRight ? paddingRight : '0'};
+    gap:${({ gap }: PropsSCH) => gap ? gap : '0'};
     @media(max-width:640px){
         padding-top: 1rem;
         padding-bottom: 1rem;

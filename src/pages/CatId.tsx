@@ -31,9 +31,9 @@ const CatId = () => {
             <Logo />
             {
                 catId?.length === 0 ? <OpacityLoader /> :
-                    <SC.ContainerSHC paddingRight='100px' paddingLeft='10px' paddingTop='0'>
+                    <SC.ContainerCatId >
                         <SC.CatIdImg>
-                            <img src={cat?.img} alt="img" width='371px' height='371px' />
+                            <img src={cat?.img} alt="img" className='idimg'/>
                         </SC.CatIdImg>
                         <SC.CatDetails>
                             <h1>{cat?.name}</h1>
@@ -59,7 +59,7 @@ const CatId = () => {
                             <Scale num={cat?.socialNeeds} text='Social needs' />
                             <Scale num={cat?.strangerFriendly} text='Strager friendly' />
                         </SC.CatDetails>
-                    </SC.ContainerSHC>
+                    </SC.ContainerCatId>
             }
             <Images />
             <Footer />
