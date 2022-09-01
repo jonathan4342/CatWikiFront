@@ -26,31 +26,35 @@ export const GlobalStyles = createGlobalStyle`
         align-items: center;
         background-color: #fff9;
         position: fixed;
-        top: 0px;
+        top: 0;
         left: 0
     }
     .imgCat{
-        border-radius:24px;
-        width:278px; 
-        height:278px;
-        @media (max-width:375px){
+        border-radius:1.5rem;
+        @media (min-width:375px){
             width:100px;
             height:100px;
         }
+        @media (min-width:720px){
+            width:278px; 
+            height:278px;
+        }
     }
     .conCat{
-    display:grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap:2rem;
-    @media (max-width:375px){
+    @media (min-width:375px){
         grid-template-columns: repeat(2,minmax(0, 1fr));
-        gap:1rem
+        gap:3rem
+    }
+    @media (min-width:720px){
+        display:grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap:2rem;
     }
 }
 .otherPhotos{
     font-weight:600;
-    font-size:36px;
-    @media (max-width:375px){
+    font-size:2.25rem;
+    @media (min-width:375px){
         font-size: 20px;
     }
 }

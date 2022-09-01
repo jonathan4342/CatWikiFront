@@ -13,7 +13,7 @@ gap:2rem;
     height: 4rem;
     cursor:pointer;
     @media (max-width:350px){
-        width:7rem;
+        width:112px;
     }
 }
 .h1{
