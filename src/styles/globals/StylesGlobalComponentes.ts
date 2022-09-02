@@ -12,9 +12,9 @@ gap:2rem;
     width:10rem;
     height: 4rem;
     cursor:pointer;
-    @media (max-width:350px){
+    /* @media (max-width:350px){
         width:112px;
-    }
+    } */
 }
 .h1{
     font-weight:600;

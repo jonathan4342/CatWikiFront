@@ -1,15 +1,15 @@
 import * as SC from '../styles'
-import logo from '../HeroImagelg.png'
-import logoC from '../CatwikiLogo.svg'
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../redux/store';
 import Cat from './Cat';
+import logo from '../HeroImagelg.png'
 import img1 from '../image1.png';
 import img2 from '../image2.png';
 import img3 from '../image3.png';
+import logoC from '../CatwikiLogo.svg'
 import { getCats } from '../redux/actions/Actions';
-
+import SearchIcon from '@mui/icons-material/Search';
+import { useEffect } from 'react';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { useAppDispatch, useAppSelector } from '../redux/store';
 
 const SideBar = () => {
 
@@ -30,10 +30,17 @@ const SideBar = () => {
                     <h1>
                         Get to know more about your cat breed.
                     </h1>
+                    <div className='search'>
                     <input
                         placeholder="Enter your breed"
                         className="input"
+                        autoComplete='email'
                     />
+                    <div className='iconSearch'>
+                    <SearchIcon/>
+                    </div>
+                    </div>
+                    
                 </div>
             </SC.ContainerInput>
             <SC.ContainerDivs>
@@ -71,7 +78,7 @@ const SideBar = () => {
                         <a href='https://www.mentalfloss.com/article/51154/10-scientific-benefits-being-cat-owner' target='_blank'>READ MORE</a> <ArrowRightAltIcon className='arrow' />
                     </SC.ButtonG>
                 </SC.SHCTexto>
-                <div className='SCHImg'>
+                <SC.SCHImg>
                     <SC.SCHImg1>
                         <img src={img2} alt="img2" className='img1' />
                         <img src={img1} alt="img1" className='img2' />
@@ -79,7 +86,7 @@ const SideBar = () => {
                     <SC.SCHImg1>
                         <img src={img3} alt="img3" className='img3' />
                     </SC.SCHImg1>
-                </div>
+                </SC.SCHImg>
             </SC.ContainerSHC>
         </div>
     )

@@ -19,11 +19,5 @@ export const ButtonG = styled.button`
     }
     .arrow{
         font-size:1.875rem;
-        @media(max-width:640px){
-        font-size:20px
-    }
-    }
-    @media(max-width:640px){
-        font-size:12px
     }
 `;

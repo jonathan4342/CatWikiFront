@@ -14,6 +14,9 @@ export const GlobalStyles = createGlobalStyle`
         font-family:'Montserrat';
         color:#291507;
     }
+    input {
+    outline: none
+    }
     * {
         margin: 0;
         padding: 0;
@@ -31,31 +34,32 @@ export const GlobalStyles = createGlobalStyle`
     }
     .imgCat{
         border-radius:1.5rem;
-        @media (min-width:375px){
-            width:100px;
-            height:100px;
-        }
-        @media (min-width:720px){
-            width:278px; 
-            height:278px;
-        }
+        height: 17.375rem;
+        width: 17.375rem;
     }
     .conCat{
-    @media (min-width:375px){
-        grid-template-columns: repeat(2,minmax(0, 1fr));
-        gap:3rem
-    }
-    @media (min-width:720px){
         display:grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap:2rem;
+        @media (max-width:640px){
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+}
+html{
+    font-size: 16px;
+
+    @media (max-width:768px){
+        font-size:15px
+    }
+    @media (max-width:640px) {
+        font-size:7px;
+    }
+    @media (max-width:375px){
+        font-size:5px;
     }
 }
 .otherPhotos{
     font-weight:600;
     font-size:2.25rem;
-    @media (min-width:375px){
-        font-size: 20px;
-    }
 }
 `;

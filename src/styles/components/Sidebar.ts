@@ -5,7 +5,7 @@ interface PropsSCH {
     paddingBottom?: string,
     paddingLeft?: string,
     paddingRight?: string,
-    gap?:string,
+    gap?: string,
     flexDirection?: string,
     alignItems?: string
 }
@@ -13,16 +13,7 @@ export const ContainerInput = styled.div`
     display:flex;
     position:relative;
     font-weight:500;
-    font-size:1.125rem;
-    @media (max-width:640px) {
-        font-size:7px;
-    }
-    @media (max-width:768px){
-        font-size:15px
-    }
-    @media (max-width:375px){
-        font-size:5px;
-    }
+    font-size:1.25rem;
     >img{
         border-radius:4.375rem 4.375rem 0 0;
         width:100%;
@@ -31,46 +22,45 @@ export const ContainerInput = styled.div`
     .cat{
         position: absolute;
         left:1.875rem;
-        top:1.875rem;
+        top:5.5rem;
         color:white;
         flex-direction: row;
         width:50%;
-        @media (max-width:375px) {
-            top:20px;
-            left: 25px;
-        }
-        @media (max-width:640px) {
-            top:5px;
-            left: 20px;
-        }
         img{ 
             filter: brightness(0) invert(1);
             width:25rem;
-            @media (max-width:375px){
-                width: 80px;
-            }
-            @media (max-width:640px) {
-                width:150px;
-            }
+        }
+        .search{
+        height:4.313rem;
+        background-color:white;
+        width:24.664rem;
+        position: absolute;
+        border-radius: 3.688rem;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items:center;
+        .iconSearch{
+            width: 20%;
+            color:black;
+            cursor:pointer;
+            padding-left: 2rem;
+        }
         }
         .input{
-        position: absolute;
-        background-color:white;
-        border-radius:1.25rem;
-        margin-top: 1.875rem;
-        width:24.625rem;
+        width: 80%;
         height:4.313rem;
         border: 0.063rem solid white;
+        font-size:1.125rem;
+        font-weight:500;
+        color:#291507;
+        border-radius: 3.688rem;
+        padding-left:2rem;
+        ::placeholder{
+            color:#291507;
+            font-weight:500;
+        }
         
-        @media (max-width:640px) {
-            width:150px;
-            height:25px;
-            margin-top: 10px;
-        }
-        @media (max-width:375px){
-            width:125px;
-            height:20px;
-        }
     }
     }
     
@@ -79,32 +69,21 @@ export const ContainerDivs = styled.div`
     display:flex;
     background-color:#E3E1DC;
     flex-direction:column;
-    padding:0.625rem 4.375rem 0 4.375rem;
+    padding:0.625rem 4.375rem 0 1.875rem;
     color:#291507;
     gap:3rem;
     height:42rem;
     border-radius:0px 0px 4.375rem 4.375rem;
-    @media (max-width:640px) {
-        padding:4px 28px 0px 28px;
-        gap:1rem;
-        height:31rem;
-    }
-    @media (max-width:375px){
-        height:25rem;
-    }
     .div1{
         font-weight:500;
         font-size:1.125rem;
-        @media (max-width:640px) {
-            font-size: 12px;
-        }
     }
     .raya{
         width:3.688rem;
         height:0.188rem;
         background-color:#4D270C;
         @media (max-width:640px) {
-            width: 40px;
+            width: 2.5rem;
         }
     }
     .div-1{
@@ -120,9 +99,6 @@ export const DivBreedsMas = styled.div`
     div h2{
         font-size:3rem;
         font-weight:700;
-        @media (max-width:640px){
-            font-size: 18px;
-        }
     }
     .DivBreedsMas1{
         width:50%
@@ -132,9 +108,9 @@ export const ImgCats = styled.div`
     display:grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap:2rem;
-    @media(max-width:640px){
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap:1rem;
+    @media (max-width:640px){
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap:1rem
     }
 `;
 export const CatImgs = styled.div`
@@ -145,12 +121,6 @@ export const CatImgs = styled.div`
     font-family:Montserrat;
     font-weight:600;
     color:#291507;
-    @media (max-width:640px){
-        font-size:12px
-    }
-    @media (max-width:375px){
-        font-size:9px
-    }
     .link{
         text-decoration: none;
         color:#291507
@@ -160,14 +130,9 @@ export const CatImgs = styled.div`
         width:13.75rem; 
         height:13.75rem;
         @media (max-width:640px){
-            width:134px;
-            height:134px;
-            border-radius:12px;
-        }
-        @media (max-width:375px){
-            width:90px;
-            height:90px;
-            border-radius:12px;
+            width:11rem;
+            height:11rem;
+            border-radius:0.75rem;
         }
     }
     
@@ -184,7 +149,7 @@ export const ContainerImgCats = styled.div`
 `;
 export const ContainerSHC = styled.div`
     display:flex;
-    flex-direction:${({flexDirection}:PropsSCH)=> flexDirection?flexDirection:'row'};
+    flex-direction:${({ flexDirection }: PropsSCH) => flexDirection ? flexDirection : 'row'};
     padding-top:${({ paddingTop }: PropsSCH) => paddingTop ? paddingTop : '5rem'};
     padding-bottom:${({ paddingBottom }: PropsSCH) => paddingBottom ? paddingBottom : '5rem'};
     padding-left:${({ paddingLeft }: PropsSCH) => paddingLeft ? paddingLeft : '0'};
@@ -193,62 +158,31 @@ export const ContainerSHC = styled.div`
     @media(max-width:640px){
         padding-top: 1rem;
         padding-bottom: 1rem;
-        flex-direction: column;
-    }
-    .SCHImg{
-        display: flex;
-        flex-direction: row;
-        @media (max-width:640px){
-            padding-left: 25px;
-        }
-        @media (max-width:375px){
-            padding-left: 0px;
-        }
     }
 `;
 export const SHCTexto = styled.div`
     display:flex;
     flex-direction:column;
     width:50%;
-    padding:3.75rem 4.375rem 4.375rem;
+    padding:3.75rem 1.875rem 4.375rem;
     gap:2rem;
-    @media(max-width:640px){
-        width:100%;
-        padding:20px 28px 20px 28px;
-        gap:1rem;
-    }
-    @media (max-width:375px){
-        width:100%;
-        padding:10px 14px 10px 14px;
-        gap:1rem
-    }
+    
     .raya{
         width:3.688rem;
         height:0.188rem;
         background-color:#4D270C;
         @media(max-width:640px){
-            width:50px;
+            width:3.125rem;
         }
     }
     >h1{
-        font-size:48px;
+        font-size:3rem;
         font-weight:700;
-        @media(max-width:640px){
-            font-size:43px;
-        }
-        @media(max-width:375px){
-            font-size:27px;
-        }
     }
     >h3{
-        font-size:3rem;
+        font-size:1.125rem;
         font-weight:500;
-        @media (max-width:640px) {
-            font-size: 15px;
-        }
-        @media(max-width:375px){
-            font-size:10px;
-        }
+        
     }
 `;
 export const SCHImg = styled.div`
@@ -263,26 +197,14 @@ export const SCHImg1 = styled.div`
     .img1{
         width:17.063rem;
         height:10.438rem;
-        @media(max-width:640px){
-            width:150px;
-            height:83px;
-        }
     }
     .img2{
         width:12.188rem;
         height:18.313rem;
-        @media(max-width:640px){
-            width:98px;
-            height:160px;
-        }
     }
     .img3{
         width:14.875rem;
         height:24.063rem;
-        @media(max-width:640px){
-            width:107px;
-            height:200px;
-            padding-left: 10px;
-        }
+        padding-left: 10px;
     }
 `;
