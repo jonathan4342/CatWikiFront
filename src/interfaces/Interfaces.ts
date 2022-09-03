@@ -1,7 +1,8 @@
 export interface InitialCats {
     cats: CatsProps[]
     catId: CatsProps[] 
-    catImg: [] 
+    catImg: [] ,
+    search:any[]
 }
 
 export interface CatsProps {

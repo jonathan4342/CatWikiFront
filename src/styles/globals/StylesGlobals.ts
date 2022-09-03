@@ -45,6 +45,10 @@ export const GlobalStyles = createGlobalStyle`
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 }
+ul,ol,li{
+        list-style: none;
+}
+
 a{
     text-decoration:none;
     color: #291507;
