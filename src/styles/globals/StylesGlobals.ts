@@ -45,14 +45,26 @@ export const GlobalStyles = createGlobalStyle`
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 }
+a{
+    text-decoration:none;
+    color: #291507;
+}
 html{
     font-size: 16px;
-
+    @media (max-width:1920px){
+        font-size:17px;
+    }
+    @media (max-width:1280px){
+        font-size:16px;
+    }
     @media (max-width:768px){
-        font-size:15px
+        font-size:9px;
     }
     @media (max-width:640px) {
         font-size:7px;
+    }
+    @media (max-width:420px){
+        font-size: 6px;
     }
     @media (max-width:375px){
         font-size:5px;

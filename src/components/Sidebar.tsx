@@ -8,19 +8,24 @@ import logoC from '../CatwikiLogo.svg'
 import { getCats } from '../redux/actions/Actions';
 import SearchIcon from '@mui/icons-material/Search';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { RootState, useAppDispatch} from '../redux/store';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import { useAppDispatch, useAppSelector } from '../redux/store';
+import { useSelector } from 'react-redux';
 
 const SideBar = () => {
 
+    const navigate= useNavigate()
     const dispatch = useAppDispatch();
-    const { cats } = useAppSelector().catSlice;
+    const  {cats}  = useSelector((state:RootState)=>state.catSlice)
     const catsHome = cats.slice(0, 4);
 
     useEffect(() => {
         dispatch(getCats())
     }, [dispatch])
-
+    const topCat=()=>{
+        navigate('/topCat')
+    }
     return (
         <div>
             <SC.ContainerInput>
@@ -31,16 +36,15 @@ const SideBar = () => {
                         Get to know more about your cat breed.
                     </h1>
                     <div className='search'>
-                    <input
-                        placeholder="Enter your breed"
-                        className="input"
-                        autoComplete='email'
-                    />
-                    <div className='iconSearch'>
-                    <SearchIcon/>
+                        <input
+                            placeholder="Enter your breed"
+                            className="input"
+                            autoComplete='email'
+                        />
+                        <div className='iconSearch'>
+                            <SearchIcon />
+                        </div>
                     </div>
-                    </div>
-                    
                 </div>
             </SC.ContainerInput>
             <SC.ContainerDivs>
@@ -56,7 +60,7 @@ const SideBar = () => {
                         </h2>
                     </div>
                     <div>
-                        <SC.ButtonG>
+                        <SC.ButtonG onClick={topCat}>
                             SEE MORE <ArrowRightAltIcon className='arrow' />
                         </SC.ButtonG>
                     </div>
@@ -64,7 +68,7 @@ const SideBar = () => {
                 <SC.ContainerImgCats>
                     <SC.ImgCats>
                         {
-                            catsHome?.map(e => <Cat key={e.id}{...e} />)
+                            catsHome?.map((e:any) => <Cat key={e.id}{...e} />)
                         }
                     </SC.ImgCats>
                 </SC.ContainerImgCats>
@@ -75,7 +79,7 @@ const SideBar = () => {
                     <h1>Why should you have a cat?</h1>
                     <h3>Having a cat aroud you can actually trigger the release of calming chemicals in your body which lowee you stress and anxiety leves.</h3>
                     <SC.ButtonG backgroundColor='white' border='1px solid white' >
-                        <a href='https://www.mentalfloss.com/article/51154/10-scientific-benefits-being-cat-owner' target='_blank'>READ MORE</a> <ArrowRightAltIcon className='arrow' />
+                        <a rel='noreferrer' href='https://www.mentalfloss.com/article/51154/10-scientific-benefits-being-cat-owner' target='_blank'>READ MORE</a> <ArrowRightAltIcon className='arrow' />
                     </SC.ButtonG>
                 </SC.SHCTexto>
                 <SC.SCHImg>

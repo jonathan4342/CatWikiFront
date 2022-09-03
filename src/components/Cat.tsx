@@ -4,7 +4,7 @@ import * as SC from '../styles'
 const Cat = (props: CatsProps) => {
     return (
         <SC.CatImgs>
-            <Link to={`/breed/${props.name}`} className='link'>
+            <Link to={`/breed/${props.name}`} >
                 <img src={props.img} alt="img"  className='imgcat' />
                 <h2>{props.name}</h2>
             </Link>

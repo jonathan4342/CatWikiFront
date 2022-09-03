@@ -19,6 +19,7 @@ export interface CatsProps {
     intelligence: number,
     socialNeeds: number,
     strangerFriendly: number,
-    temperament: string
+    temperament: string,
+    number:number
 }
 

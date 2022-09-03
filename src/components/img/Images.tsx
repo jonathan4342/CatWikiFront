@@ -1,8 +1,9 @@
-import { useAppSelector } from "../../redux/store"
+import { useSelector } from "react-redux"
+import { RootState } from "../../redux/store"
 import { OpacityLoader } from "../loaders/OpacityLoader"
 
 export const Images = () => {
-    const { catImg } = useAppSelector().catSlice
+    const { catImg } =  useSelector((state:RootState)=>state.catSlice)
 
     return (
         <>
@@ -10,7 +11,7 @@ export const Images = () => {
             <div className="conCat">
                 {
                     catImg?.length === 0 ? <OpacityLoader /> :
-                        catImg?.map(e => <img src={e} alt="img"  className="imgCat" />)
+                        catImg?.map(e => <img key={e} src={e} alt="img"  className="imgCat" />)
                 }
             </div>
         </>

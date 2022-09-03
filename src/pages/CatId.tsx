@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Footer from '../components/Footer';
 import { Images } from '../components/img/Images';
@@ -6,7 +7,7 @@ import { OpacityLoader } from '../components/loaders/OpacityLoader';
 import Logo from '../components/Logo';
 import { Scale } from '../components/Scale';
 import { getCatId, getCatIdImg } from '../redux/actions/Actions';
-import { useAppDispatch, useAppSelector } from '../redux/store';
+import { RootState, useAppDispatch} from '../redux/store';
 import * as SC from '../styles';
 
 
@@ -14,7 +15,7 @@ const CatId = () => {
     const name = useParams().id;
 
     const dispatch = useAppDispatch()
-    const { catId } = useAppSelector().catSlice
+    const { catId } = useSelector((state:RootState)=>state.catSlice)
 
     const cat = catId?.find(e => e.id)
 

@@ -40,6 +40,7 @@ export const ContainerInput = styled.div`
         flex-direction:row;
         justify-content: space-between;
         align-items:center;
+        margin-top: 2rem;
         .iconSearch{
             width: 20%;
             color:black;
@@ -121,10 +122,6 @@ export const CatImgs = styled.div`
     font-family:Montserrat;
     font-weight:600;
     color:#291507;
-    .link{
-        text-decoration: none;
-        color:#291507
-    }
     .imgcat{
         border-radius:1.5rem;
         width:13.75rem; 
