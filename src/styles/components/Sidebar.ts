@@ -32,8 +32,8 @@ export const ContainerInput = styled.div`
         }
         .search{
         height:4.313rem;
-        background-color:white;
-        width:24.664rem;
+        background-color:#FFFFFF;
+        width:24rem;
         position: absolute;
         border-radius: 3.688rem;
         display: flex;

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom";
 import { RootState } from "../redux/store"
 import { ContSearch } from "../styles";
 
@@ -11,13 +12,14 @@ export const Search = () => {
                 {
                     search &&
                     search.map(e =>
-                        <li>
-                            {e.name}
-                        </li>
-                    
+                        <Link to={`/breed/${e.name}`}>
+                            <li>
+                                {e.name}
+                            </li>
+                        </Link>
                     )
                 }
-                </ul>
+            </ul>
         </ContSearch>
     )
 }
